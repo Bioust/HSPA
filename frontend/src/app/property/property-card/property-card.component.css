@@ -1,0 +1,10 @@
+h1 {
+    color: red;
+}
+.cropImage {
+    height: 200px;
+}
+.card-body {
+    padding-top: 10px;
+    padding-left: 10px;
+}
