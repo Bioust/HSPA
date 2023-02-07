@@ -1,4 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
+import { IProperty } from "../IProperty.interface";
+import { IPropertyBase } from 'src/app/model/ipropertybase';
 
 @Component({
     selector: 'app-property-card',
@@ -8,11 +10,15 @@ import { Component } from "@angular/core";
     styleUrls: ['property-card.component.css']
 })
 export class PropertyCardComponenet {
-    property: any = {
-        "Id" : 1,
-        "Type" : "House",
-        "Price" : "20,000",
-        "Name" : "Building",
-    }
+    @Input() property : IPropertyBase;  //To get data from the parent component
+    @Input() hideIcons:  boolean;
+    // property: any = {
+    //     "Id" : 1,
+    //     "Type" : "House",
+    //     "Price" : "20,000",
+    //     "Name" : "Building",
+    // }
+
+    
 
 }
